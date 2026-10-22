@@ -88,6 +88,7 @@ fn watch_path(path: &Path, signal: mpsc::Sender<()>) -> notify::Result<notify::R
     let canonical = std::fs::canonicalize(directory).unwrap_or_else(|_| directory.to_path_buf());
     let real_target = canonical.join(path.strip_prefix(directory).unwrap_or(path));
     let mut watcher = notify::recommended_watcher(move |result: notify::Result<notify::Event>| {
+        eprintln!("DIAG {:?} target={:?}", result, target);
         let changed = match result {
             // On Linux, our own stat/read/open must not wake us again.
             Ok(event) if matches!(event.kind, notify::EventKind::Access(_)) => false,
