@@ -13,9 +13,8 @@
 </p>
 
 - **One dashboard for every session, solely keyboard-driven.** A few keystrokes jump you to the session that needs you. Claude Code, Codex, Reasonix, Kimi Code, Grok Build, opencode, Pi, Antigravity, and omp share the table.
-- **Sessions run in your own terminal.** Kitty, zellij, tmux, Ghostty, or iTerm2, with your fonts, settings, and key bindings.
-- **Claude and Codex settings stay yours.** Claude hooks travel in a per-session `--settings` file, leaving `~/.claude/settings.json` unchanged. Codex launches use a captain-miao profile, leaving `~/.codex/config.toml` and `~/.codex/hooks.json` unchanged.
-- **Remote sessions keep working with the lid closed.** `miao-server` runs the agent in a [shpool](https://github.com/shell-pool/shpool) pty pool on the SSH host, so a sleep or a dropped link leaves the session running.
+- **It fits your existing workflow, totally isolated.** Your tools, config, and frameworks stay as they are, with no required configuration method and no required terminal. Kitty, zellij, tmux, Ghostty, and iTerm2 all work, and Claude and Codex global config stays untouched.
+- **Persistent sessions over SSH.** The agent keeps running on the host, so closing the lid, losing the network, or quitting the terminal leaves the session running.
 
 <a href="assets/captain-miao.mp4"><img src="assets/dashboard.png" alt="captain-miao dashboard in Kitty with 15 active and waiting agent sessions"></a>
 
