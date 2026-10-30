@@ -12,8 +12,8 @@
   <img src="https://img.shields.io/badge/platform-macOS%20%7C%20Linux-lightgrey" alt="platforms: macOS, Linux">
 </p>
 
-- **One dashboard for every session.** Claude Code, Codex, Reasonix, Kimi Code, Grok Build, opencode, Pi, Antigravity, and omp share one status table. `s` selects the next session that needs attention; `Enter` focuses its window.
-- **Sessions run in your terminal.** Native windows, tabs, or panes in Kitty, zellij, tmux, Ghostty, or iTerm2, with your fonts, settings, and key bindings.
+- **One dashboard for every session, solely keyboard-driven.** A few keystrokes jump you to the session that needs you. Claude Code, Codex, Reasonix, Kimi Code, Grok Build, opencode, Pi, Antigravity, and omp share the table.
+- **Sessions run in your own terminal.** Kitty, zellij, tmux, Ghostty, or iTerm2, with your fonts, settings, and key bindings.
 - **Claude and Codex settings stay yours.** Claude hooks travel in a per-session `--settings` file, leaving `~/.claude/settings.json` unchanged. Codex launches use a captain-miao profile, leaving `~/.codex/config.toml` and `~/.codex/hooks.json` unchanged.
 - **Remote sessions keep working with the lid closed.** `miao-server` runs the agent in a [shpool](https://github.com/shell-pool/shpool) pty pool on the SSH host, so a sleep or a dropped link leaves the session running.
 
@@ -45,7 +45,7 @@ cd /path/to/your/project
 miao
 ```
 
-`o` starts an agent in the selected session's directory, or opens the directory picker when nothing is selected. `O` always opens that picker. `Enter` focuses the window. `?` lists every key.
+`o` starts an agent in the selected session's directory, or opens the directory picker when nothing is selected. `O` always opens that picker. `s` selects the next session that needs attention, and `Enter` focuses its window. `?` lists every key.
 
 ## More
 
